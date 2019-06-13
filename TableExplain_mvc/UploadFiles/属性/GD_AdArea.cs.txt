@@ -1,0 +1,104 @@
+using System;
+namespace GeduUser.Model 
+{ 
+    [Table("GD_AdArea")]
+    public class GD_AdArea
+    { 
+         /// <summary>
+         ///id
+         /// <summary>
+         public int AdAreaId
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///区域名称
+         /// <summary>
+         public string? AdAreaName
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///区域名称
+         /// <summary>
+         public string? PageName
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///广告类型，0 图片，1文字，幻灯
+         /// <summary>
+         public int? AdType
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///幻灯显示数
+         /// <summary>
+         public int? ShowNum
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///宽度
+         /// <summary>
+         public int? Width
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///高度
+         /// <summary>
+         public int? Height
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///概要
+         /// <summary>
+         public string? Summary
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///是否禁用
+         /// <summary>
+         public bool? IsDisabled
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///创建时间
+         /// <summary>
+         public System.DateTime? CreateTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///是否删除
+         /// <summary>
+         public bool? IsDelete
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///修改时间
+         /// <summary>
+         public System.DateTime? UpdateTime
+         {
+             get;
+             set;
+         }
+    } 
+} 

@@ -1,0 +1,153 @@
+using System;
+namespace Ipdss.Model 
+{ 
+    [Table("TEMP_2017_02_2113")]
+    public class TEMP_2017_02_2113
+    { 
+         /// <summary>
+         ///
+         /// <summary>
+        [Column(TypeName = "datetime2")]
+         public System.DateTime? ReportTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public int? MKBTID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public string BusinessName
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public string? ResourceName
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public string? PlatformName
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public string DepartmentName
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public int? ResourceID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public int? PlatformID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public int DepartmentID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public int? AssignNum
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public int EmptyNum
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public System.Decimal EmptyNumRatio
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public int BlacklistNum
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public System.Decimal BlacklistNumRatio
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public int ErrorNum
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public System.Decimal ErrorNumRatio
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public int InvalidNum
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public System.Decimal InvalidRatio
+         {
+             get;
+             set;
+         }
+    } 
+} 

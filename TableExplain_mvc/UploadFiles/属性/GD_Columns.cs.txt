@@ -1,0 +1,144 @@
+using System;
+namespace GeduUser.Model 
+{ 
+    [Table("GD_Columns")]
+    public class GD_Columns
+    { 
+         /// <summary>
+         ///ID
+         /// <summary>
+         public int Id
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///栏目名称
+         /// <summary>
+         public string? ColumnName
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///栏目类型0 为新闻，1为项目
+         /// <summary>
+         public int? ColumnsType
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///父类ID
+         /// <summary>
+         public int? ParentId
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///关键字
+         /// <summary>
+         public string? KeyWord
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///栏目关键字描述
+         /// <summary>
+         public string? Description
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///排序
+         /// <summary>
+         public int? sort
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///图片URL
+         /// <summary>
+         public string? ImageUrl
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///介绍
+         /// <summary>
+         public string? Content
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///文件路径
+         /// <summary>
+         public string? FilePath
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///链接URL
+         /// <summary>
+         public string? LinkUrl
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///是否禁用
+         /// <summary>
+         public bool? IsDisabled
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///创建时间
+         /// <summary>
+         public System.DateTime? CreateTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///创建用户
+         /// <summary>
+         public int? CreateUser
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///是否删除
+         /// <summary>
+         public bool? IsDelete
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///修改时间
+         /// <summary>
+         public System.DateTime? UpdateTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///修改用户
+         /// <summary>
+         public int? UpdateUser
+         {
+             get;
+             set;
+         }
+    } 
+} 

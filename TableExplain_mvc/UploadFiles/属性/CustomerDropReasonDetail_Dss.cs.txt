@@ -1,0 +1,88 @@
+using System;
+namespace Ipdss.Model 
+{ 
+
+    public class CustomerDropReasonDetail_Dss
+    { 
+         /// <summary>
+         ///
+         /// <summary>
+         public int ID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///导入日期
+         /// <summary>
+         public string ReportTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///客户ID
+         /// <summary>
+         public int CustomerID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///客户编码
+         /// <summary>
+         public string CustomerCode
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///销售阶段
+         /// <summary>
+         public int SSTID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///流失用户ID
+         /// <summary>
+         public int DropUser
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///流失时间
+         /// <summary>
+         public System.DateTime DropTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///流失原因
+         /// <summary>
+         public string DropReason
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///客户创建时间
+         /// <summary>
+         public System.DateTime CreateTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///此条创建时间
+         /// <summary>
+         public System.DateTime RecordCreateTime
+         {
+             get;
+             set;
+         }
+    } 
+} 

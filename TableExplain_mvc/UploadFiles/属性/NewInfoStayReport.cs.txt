@@ -1,0 +1,74 @@
+using System;
+namespace Ipdss.Model 
+{ 
+    [Table("NewInfoStayReport")]
+    public class NewInfoStayReport
+    { 
+         /// <summary>
+         ///
+         /// <summary>
+         public int Id
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+        [Column(TypeName = "datetime2")]
+         public System.DateTime? ReportTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///维度级别
+         /// <summary>
+         public int? ReportLevel
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///维度ID
+         /// <summary>
+         public int? CommonID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///当月信息总数
+         /// <summary>
+         public int? ThisMonthAllInfoNum
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///当月库中信息数 库中当月分配的信息数
+         /// <summary>
+         public int? ThisMonthInfoNum
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///新信息留存率
+         /// <summary>
+         public System.Decimal? NewInfoStayRate
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///创建时间
+         /// <summary>
+        [Column(TypeName = "datetime2")]
+         public System.DateTime? RecordCreateTime
+         {
+             get;
+             set;
+         }
+    } 
+} 

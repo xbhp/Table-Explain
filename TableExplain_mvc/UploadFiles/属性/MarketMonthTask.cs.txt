@@ -1,0 +1,80 @@
+using System;
+namespace Ipdss.Model 
+{ 
+
+    public class MarketMonthTask
+    { 
+         /// <summary>
+         ///ID
+         /// <summary>
+         public int ID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///投放任务类别
+         /// <summary>
+         public int MKBTID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///投放任务量
+         /// <summary>
+         public int TaskNum
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///月份
+         /// <summary>
+         public int Months
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///是否删除
+         /// <summary>
+         public bool RecordIsDelete
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///创建或者修改用户
+         /// <summary>
+         public int CreatedUser
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///修改用户
+         /// <summary>
+         public int UpdateUser
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public System.DateTime RecordCreateTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public System.DateTime RecordUpdateTime
+         {
+             get;
+             set;
+         }
+    } 
+} 

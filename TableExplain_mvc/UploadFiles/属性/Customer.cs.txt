@@ -1,0 +1,384 @@
+using System;
+namespace .Model 
+{ 
+
+    public class Customer
+    { 
+         /// <summary>
+         ///主键ID
+         /// <summary>
+         public int CustomerID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///客户名称
+         /// <summary>
+         public string CustomerTitle
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///来源ID
+         /// <summary>
+         public int Source
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///所在区域
+         /// <summary>
+         public int RegionID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///客户级别
+         /// <summary>
+         public int LevelID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///首次分配人
+         /// <summary>
+         public int FirstAssign
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///是否是新客户，新分配的是1，领取是0，放弃是0
+         /// <summary>
+         public bool IsNew
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///是否是领取的公共客户
+         /// <summary>
+         public bool IsPublic
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///放弃次数
+         /// <summary>
+         public int GiveCount
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///客户编码
+         /// <summary>
+         public string CustomerCode
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///归属部门,0：为公海客户
+         /// <summary>
+         public int BelongDepartment
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///最后放入公海的时间，自动程序使用
+         /// <summary>
+         public System.DateTime LastDropTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///最后一条咨询信息的最后回访时间
+         /// <summary>
+         public System.DateTime FirstVisitTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///最后回访时间
+         /// <summary>
+         public System.DateTime LastVisitTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public System.DateTime NextVisitTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///注册用户ID
+         /// <summary>
+         public int CreatedUser
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///最后修改用户
+         /// <summary>
+         public int ModifyUser
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///最后咨询信息分配时间
+         /// <summary>
+         public System.DateTime LastInfoTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///销售阶段
+         /// <summary>
+         public int LastSSTID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public int LastCVRTID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///最后购买阶段，CustomerBuyStep
+         /// <summary>
+         public int LastCBSID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///客户类型ID，关联CustomerType
+         /// <summary>
+         public int CTID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///客户行业类型ID，关联CustomerIndustryType
+         /// <summary>
+         public int CITID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///客户所属阶段  CustomerStepType
+         /// <summary>
+         public int CSTID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///记录是否删除
+         /// <summary>
+         public bool RecordIsDelete
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///记录创建时间
+         /// <summary>
+         public System.DateTime RecordCreateTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///记录最后修改时间
+         /// <summary>
+         public System.DateTime RecordUpdateTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///待回收状态：0（NULL）: 正常  1待回收 2回收审核
+         /// <summary>
+         public int Status
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///客户跟踪级别，CustomerTrackLevelType 表主键
+         /// <summary>
+         public int TrackLevel
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///客户分类 0-潜在客户  1-签约客户
+         /// <summary>
+         public int Classify
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public string Remark
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///客户成交级别
+         /// <summary>
+         public int CPayLevelID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///客户所属人
+         /// <summary>
+         public int BelongUser
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public string Address
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///CountryType 表主键ID
+         /// <summary>
+         public int CountryID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///是否是共享客户
+         /// <summary>
+         public bool IsShare
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///上级客户
+         /// <summary>
+         public int ParentCustomerID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///最后流失原因类型
+         /// <summary>
+         public string LastLossReasonType
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///业务员最后流失时间
+         /// <summary>
+         public System.DateTime LastLossTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///是否是最终成交客户，规则为名下的合同金额大于0
+         /// <summary>
+         public bool IsFinalTrade
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///流失客户审核状态  0 未审核 ,1 已审核
+         /// <summary>
+         public int AuditingStatus
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///流失客户审核人
+         /// <summary>
+         public int AuditingUserID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///流失客户审核时间
+         /// <summary>
+         public System.DateTime AuditingTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///最后流失人 业务员
+         /// <summary>
+         public int LastLossUserID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///总回访次数
+         /// <summary>
+         public int TotalVisitNum
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///是否关注
+         /// <summary>
+         public bool IsAttention
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///是否含有新消息
+         /// <summary>
+         public bool IsHasNewMsg
+         {
+             get;
+             set;
+         }
+    } 
+} 

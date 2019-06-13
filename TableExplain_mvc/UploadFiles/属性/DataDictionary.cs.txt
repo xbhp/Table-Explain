@@ -1,0 +1,72 @@
+using System;
+namespace Ipdss.Model 
+{ 
+
+    public class DataDictionary
+    { 
+         /// <summary>
+         ///ID
+         /// <summary>
+         public int Id
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///类型
+         /// <summary>
+         public string DDType
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///名称
+         /// <summary>
+         public string DDName
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///编码
+         /// <summary>
+         public string DDCode
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///排序号
+         /// <summary>
+         public int DisplayOrder
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///是否删除
+         /// <summary>
+         public bool RecordIsDelete
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public System.DateTime RecordCreateTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public System.DateTime RecordUpdateTime
+         {
+             get;
+             set;
+         }
+    } 
+} 

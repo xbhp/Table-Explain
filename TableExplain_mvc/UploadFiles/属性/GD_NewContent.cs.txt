@@ -1,0 +1,176 @@
+using System;
+namespace GeduUser.Model 
+{ 
+    [Table("GD_NewContent")]
+    public class GD_NewContent
+    { 
+         /// <summary>
+         ///id
+         /// <summary>
+         public int Id
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///标题
+         /// <summary>
+         public string Title
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///标题是否加粗
+         /// <summary>
+         public bool? TitleBold
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///标题颜色
+         /// <summary>
+         public string? TitleColor
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///副标题
+         /// <summary>
+         public string? SubTitle
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///外部链接
+         /// <summary>
+         public string? LinkUrl
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///图片地址
+         /// <summary>
+         public string? ImageUrl
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///作者
+         /// <summary>
+         public string? Author
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///点击数
+         /// <summary>
+         public int? ClickNum
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///来源
+         /// <summary>
+         public string? Origin
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///是否热门
+         /// <summary>
+         public bool? IsHot
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///关键字
+         /// <summary>
+         public string? keyword
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///描述
+         /// <summary>
+         public string? Descriptions
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///内容
+         /// <summary>
+         public string? Content
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///排序
+         /// <summary>
+         public int? sort
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///栏目id
+         /// <summary>
+         public int? ColumnId
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///是否禁用
+         /// <summary>
+         public bool? IsDisabled
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///创建时间
+         /// <summary>
+         public System.DateTime? CreateTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///是否删除
+         /// <summary>
+         public bool? IsDelete
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///修改时间
+         /// <summary>
+         public System.DateTime? UpdateTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///创建用户
+         /// <summary>
+         public int? CreateUser
+         {
+             get;
+             set;
+         }
+    } 
+} 

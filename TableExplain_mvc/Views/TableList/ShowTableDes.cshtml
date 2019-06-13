@@ -1,0 +1,169 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>显示表字段说明</title>
+    @Scripts.Render("~/bundles/jquery")
+    <link rel="stylesheet" type="text/css" href="/static/h-ui/css/H-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="/static/h-ui.admin/css/H-ui.admin.css" />
+    <link rel="stylesheet" type="text/css" href="/lib/Hui-iconfont/1.0.7/iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="/lib/icheck/icheck.css" />
+    <link rel="stylesheet" type="text/css" href="/static/h-ui.admin/skin/default/skin.css" id="skin" />
+    <link rel="stylesheet" type="text/css" href="/static/h-ui.admin/css/style.css" />
+    <link rel="stylesheet" href="~/Content/jqwidgets/styles/jqx.base.css" type="text/css" />
+
+    <script type="text/javascript" src="~/Scripts/jqwidgets/localization.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxcore.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxdraw.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxchart.core.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxbuttons.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxscrollbar.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxmenu.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxgrid.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxgrid.selection.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxgrid.aggregates.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxgrid.sort.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxgrid.pager.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxgrid.columnsresize.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxdata.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxdata.export.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxgrid.export.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxdropdownlist.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxlistbox.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxtree.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxdropdownbutton.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxtooltip.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxinput.js"></script>
+</head>
+<body>
+    
+    <div style="margin:20px 0 0 50px"><h5 id="TableNametitle">显示表字段说明</h5><div id="jqxgrid"></div>
+    <div style="margin-top:5px">
+        <input type="button" class="btn btn-secondary-outline radius" value="生成属性并下载" id="produceProperty" />  &nbsp;&nbsp;
+        <input type="button" class="btn btn-secondary-outline radius" value="查看表外键" id="showtableForeignKey" /> &nbsp;&nbsp;
+        <input id="ddlExport" type="button" value="导出EXCEL" class="btn btn-secondary-outline radius"  />
+        </div></div>
+    
+    <script type="text/javascript">
+        $(function () {
+            pickerDateSuccess();
+
+            $("#produceProperty").click(function () {
+                var Request = new Object();
+                Request = GetRequest();
+                window.location = "/TableList/ProduceProperty?" + "tableName=" + Request["TableName"];
+            });
+            $("#showtableForeignKey").click(function () {
+                var Request = new Object();
+                Request = GetRequest();
+                window.location = "/TableList/ShowTableForeignKey?TableName=" + Request["TableName"];
+            });
+
+            $('#ddlExport').click(function () {
+                $("#jqxgrid").jqxGrid('exportdata', 'xls', $("#TableNametitle").text() + '(' + $('#date').val() + ')', true, null, true, null, 'utf8');
+
+            });
+        });
+    // 时间控件的触发回调
+    function pickerDateSuccess() {
+        var source =
+          {
+              datatype: "json",
+              datafields: [
+                  { name: 'TableName', type: 'string' },
+                  { name: 'ColumnNum', type: 'int' },
+                  { name: 'ColumnName', type: 'string' },
+                  { name: 'ColumnExplain', type: 'string' },
+                  { name: 'DateType', type: 'stirng' },
+                  { name: 'DateSize', type: 'int' },
+                  { name: 'DecimalSize', type: 'int' },
+                  { name: 'Identification', type: 'stirng' },
+                  { name: 'MianKey', type: 'stirng' },
+                  { name: 'IsEmpty', type: 'stirng' },
+                  { name: 'defaultValue', type: 'stirng' }
+              ],
+              url: "/TableList/GetListTable",
+              //sortcolumn: 'RecordCreateTime',
+              //sortdirection: 'desc'
+          };
+
+        var Request = new Object();
+        Request = GetRequest();
+        $("#TableNametitle").html($("#TableNametitle").html() + ":" + Request["TableName"]);
+        var dataAdapter = new $.jqx.dataAdapter(source,
+            {
+                formatData: function (data) {
+                    $.extend(data, {
+                        tableName: Request["TableName"]
+                    });
+                    return data;
+                }
+            }
+        );
+        $('#jqxgrid').jqxGrid('clear');
+        drawGrid(dataAdapter);
+
+
+
+    }
+    // 画表格
+    function drawGrid(dataAdapter) {
+
+        $("#jqxgrid").jqxGrid(
+        {
+            //width: $(window).width() - 50,
+            width: 1200,
+            source: dataAdapter,
+            showstatusbar: true,
+            statusbarheight: 25,
+            altrows: true,
+            sortable: true,
+            //pageable: true,
+            //pagesize: 20,
+            showaggregates: false,
+            columnsresize: true,
+            selectionmode: 'multiplecellsextended',
+            localization: getLocalization('cn'),
+            columns: [
+              //{ text: '表名', datafield: 'TableName', cellsalign: 'right',  columntype: 'textbox' },
+              { text: '行号', datafield: 'ColumnNum', columntype: 'textbox',  cellsalign: 'right'},
+              { text: '行名称', datafield: 'ColumnName', width:150, columntype: 'textbox',  align: 'right', cellsalign: 'right' },
+               { text: '行说明', datafield: 'ColumnExplain', width: 135, cellsalign: 'right', align: 'right' },
+              { text: '字段类型', datafield: 'DateType', columntype: 'textbox', cellsalign: 'right' },
+              { text: '类型长度', datafield: 'DateSize',  columntype: 'textbox', cellsalign: 'right' },
+              { text: '小数位数', datafield: 'DecimalSize', columntype: 'textbox', cellsalign: 'left' },
+              { text: '标识', datafield: 'Identification', columntype: 'textbox', cellsalign: 'left'},
+              { text: '是否主键', datafield: 'MianKey', columntype: 'textbox', cellsalign: 'left'},
+              { text: '是否为空', datafield: 'IsEmpty', columntype: 'textbox', cellsalign: 'right' },
+              { text: '默认值', datafield: 'defaultValue', columntype: 'textbox', cellsalign: 'right' }
+            ]
+        });
+
+    }
+
+
+
+    function GetRequest() {
+        var url = location.search; //获取url中"?"符后的字串   
+        var theRequest = new Object();
+        if (url.indexOf("?") != -1) {
+            var str = url.substr(1);
+            strs = str.split("&");
+            for (var i = 0; i < strs.length; i++) {
+                theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+            }
+        }
+        return theRequest;
+    }
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+D:\Projecttest\TableExplain_mvc\TableExplain.Db\bin\Debug\TableExplain.Db.dll.config
+D:\Projecttest\TableExplain_mvc\TableExplain.Db\bin\Debug\TableExplain.Db.dll
+D:\Projecttest\TableExplain_mvc\TableExplain.Db\bin\Debug\TableExplain.Db.pdb
+D:\Projecttest\TableExplain_mvc\TableExplain.Db\bin\Debug\EntityFramework.dll
+D:\Projecttest\TableExplain_mvc\TableExplain.Db\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projecttest\TableExplain_mvc\TableExplain.Db\bin\Debug\Newtonsoft.Json.dll
+D:\Projecttest\TableExplain_mvc\TableExplain.Db\bin\Debug\EntityFramework.xml
+D:\Projecttest\TableExplain_mvc\TableExplain.Db\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projecttest\TableExplain_mvc\TableExplain.Db\bin\Debug\Newtonsoft.Json.xml
+D:\Projecttest\TableExplain_mvc\TableExplain.Db\bin\Debug\zh-Hans\EntityFramework.resources.dll
+D:\Projecttest\TableExplain_mvc\TableExplain.Db\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+D:\Projecttest\TableExplain_mvc\TableExplain.Db\obj\Debug\TableExplain.Db.dll
+D:\Projecttest\TableExplain_mvc\TableExplain.Db\obj\Debug\TableExplain.Db.pdb

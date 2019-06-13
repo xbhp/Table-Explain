@@ -1,0 +1,79 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>index</title>
+    <link rel="stylesheet" type="text/css" href="/static/h-ui/css/H-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="/static/h-ui.admin/css/H-ui.admin.css" />
+    <link rel="stylesheet" type="text/css" href="/lib/Hui-iconfont/1.0.7/iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="/lib/icheck/icheck.css" />
+    <link rel="stylesheet" type="text/css" href="/static/h-ui.admin/skin/default/skin.css" id="skin" />
+    <link rel="stylesheet" type="text/css" href="/static/h-ui.admin/css/style.css" />
+</head>
+<body>
+    <div style="margin-left:20px">
+        <h4> 数据库连接信息</h4>
+        <div style="padding-top:5px">当前连接地址：<span style="text-decoration:underline">@ViewBag.Conntion</span></div>
+        <h4>数据库连接列表</h4>
+        <table id="showTb" class="table table-border table-bordered table-bg" style="width:900px;">
+            <tr><th style="width:40%">库说明</th><th style="width:30%; text-align:left">库名</th><th style="width:30%; text-align:left">设置</th></tr>
+        </table> 
+        <h4>新增数据库连接</h4>
+        <input type="button" class='btn btn-secondary-outline radius'  value="新增连接" id="adddb" />
+    </div>
+    <script type="text/javascript" src="/lib/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/lib/layer/2.1/layer.js"></script>
+    <script type="text/javascript" src="/lib/laypage/1.2/laypage.js"></script>
+    <script type="text/javascript" src="/static/h-ui/js/H-ui.js"></script>
+    <script type="text/javascript" src="/static/h-ui.admin/js/H-ui.admin.js"></script> 
+    <script type="text/javascript">
+        $(function () {
+
+
+            $.post("/TableConn/GetConList", function (data) {
+                
+                $.each(eval(data), function (i, v) {
+                   
+                    $("#showTb").append(" <tr><td>" + v.dbExplain + "</td><td>" + v.value + "</td><td><input class='btn btn-secondary-outline radius' type=\"button\" value=\"修改\" onclick=\"editdb('" + v.value + "','" + v.dbExplain + "')\"  id=\"tded_" + v.value + "\"  />&nbsp;&nbsp; <input type=\"button\" class='btn btn-secondary-outline radius' value=\"设置此数据库\"  onclick=\"setdb('" + v.value + "')\"   id=\"td_" + v.value + "\"  /> </td>");
+                });
+            });
+
+   
+
+            $("#adddb").click(function () {
+                member_add("新增", "AddorEditConn?isAdd=1", '650', '310');
+             });
+        });
+        function editdb(dbname,dbExplain)
+        {
+
+            member_add("修改", "AddorEditConn?isAdd=0&dbExplain=" + encodeURI(dbExplain) + "&dbName=" + dbname, '650', '310');
+            
+        }
+
+        function setdb(dbname) {
+
+            $.post("/TableConn/SetConn", { dbName: dbname }, function (data) {
+                if (data == "1")
+                {
+                    alert("设置成功！");
+                    window.location.href = "index";
+                }
+                else
+                    alert("设置失败！");
+            });
+        }
+
+        function member_add(title, url, w, h) {
+            layer_show(title, url, w, h);
+        }
+    </script>
+</body>
+</html>

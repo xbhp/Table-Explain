@@ -1,0 +1,176 @@
+using System;
+namespace Ipdss.Model 
+{ 
+
+    public class SalesInfoTradeRateReport
+    { 
+         /// <summary>
+         ///id
+         /// <summary>
+         public int id
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///时间维度
+         /// <summary>
+         public System.DateTime ReportTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///维度（0为公司，1为区域，2为部门，3为组，4为人员）
+         /// <summary>
+         public int ReportLevel
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///当前维度下的ID
+         /// <summary>
+         public int CommonId
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///当前成交金额
+         /// <summary>
+         public System.Decimal OrderAmount
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///信息分配数
+         /// <summary>
+         public int InfoAssignNum
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///当前分配成交数
+         /// <summary>
+         public int NowInfoAssignTradeNum
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///当月咨询当月成交金额
+         /// <summary>
+         public System.Decimal NowInfoOrderAmount
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///前期咨询本月成交客户数
+         /// <summary>
+         public int LastInfoAssignTradeNum
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///前期咨询本月成交金额
+         /// <summary>
+         public System.Decimal LastInfoOrderAmount
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///老客户成交数
+         /// <summary>
+         public int OldCustomerTradeNum
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///老客户成交金额
+         /// <summary>
+         public System.Decimal OldCustomerOrderAmount
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///库中已成交客户数
+         /// <summary>
+         public int AlreadyTradeNum
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///库中未成交客户数
+         /// <summary>
+         public int NotTradeNum
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///当前分配成交率
+         /// <summary>
+         public System.Decimal NowInfoAssignTradeRate
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///前期咨询本月成交客户数
+         /// <summary>
+         public System.Decimal LastInfoAssignTradeRate
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///老客户成交率
+         /// <summary>
+         public System.Decimal OldCustomerTradeRate
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///当月咨询当月成交金额占比
+         /// <summary>
+         public System.Decimal NowInfoOrderAmountRate
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///前期咨询本月成交金额占比
+         /// <summary>
+         public System.Decimal LastInfoOrderAmountRate
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///老客户成交金额占比
+         /// <summary>
+         public System.Decimal OldCustomerOrderAmountRate
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///时间
+         /// <summary>
+         public System.DateTime RecordCreateTime
+         {
+             get;
+             set;
+         }
+    } 
+} 

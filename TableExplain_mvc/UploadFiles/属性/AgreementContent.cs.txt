@@ -1,0 +1,176 @@
+using System;
+namespace .Model 
+{ 
+
+    public class AgreementContent
+    { 
+         /// <summary>
+         ///
+         /// <summary>
+         public int ACID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///订单ID
+         /// <summary>
+         public int OrderID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///AgreementType 表ID
+         /// <summary>
+         public int ATID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///0:全款，1：分期
+         /// <summary>
+         public int BuyPayType
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///协议备注
+         /// <summary>
+         public string Remark
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///委托处理几个月（商标案件风险）
+         /// <summary>
+         public int DelegationMagMonth
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///办理案件约束天数（案件风险协议)
+         /// <summary>
+         public int AppointLastDays
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///商标起名：限制交稿天数
+         /// <summary>
+         public int BNDisposeDays
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///商标起名：交稿数量
+         /// <summary>
+         public int BNDisposeCount
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///商标起名：限制付款天数
+         /// <summary>
+         public int BNPaymentDays
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public bool RecordIsDelete
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public System.DateTime RecordCreateTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public System.DateTime RecordUpdateTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///【无注册加急受通】协议加急日期
+         /// <summary>
+         public int RepleaceContentPassBy
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///【无申请加急转让】协议加急日期
+         /// <summary>
+         public int RepleaceContentTransfer
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///【加急打印注册证】协议加急日期
+         /// <summary>
+         public int RepleaceContentRegistration
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///【加急打印各类证明】协议加急日期
+         /// <summary>
+         public int RepleaceContentProve
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///【补发】协议加急日期
+         /// <summary>
+         public int RepleaceContentReissue
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///【加快审查】协议加急日期
+         /// <summary>
+         public int RepleaceContentExamination
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public int SecurityAgreementDays
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public int SecurityAgreementGetType
+         {
+             get;
+             set;
+         }
+    } 
+} 

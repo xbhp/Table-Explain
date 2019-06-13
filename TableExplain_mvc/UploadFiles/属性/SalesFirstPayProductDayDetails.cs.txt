@@ -1,0 +1,264 @@
+using System;
+namespace Ipdss.Model 
+{ 
+
+    public class SalesFirstPayProductDayDetails
+    { 
+         /// <summary>
+         ///
+         /// <summary>
+         public int OIDID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///订单编码，为合同号，区域+年月日(YYYYMMDD)+序号(4位)
+         /// <summary>
+         public string ContractNumber
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///产品编码
+         /// <summary>
+         public string CustomerCode
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///ApplicationUsers 表主键,合同签约人
+         /// <summary>
+         public string OrderSigner
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public string OrderSignerType
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public string SignerNameCode
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public string SignerCodeA
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public string SignerCodeT
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///产品编码
+         /// <summary>
+         public string ProductCode
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///金额，商标交易金额，其他的使用BusinessSalePrice表中的金额
+         /// <summary>
+         public string ProductLevel1Name
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public string ProductLevel1Code
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///金额，商标交易金额，其他的使用BusinessSalePrice表中的金额
+         /// <summary>
+         public string ProductLevel2Name
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public string ProductLevel2Code
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///金额，商标交易金额，其他的使用BusinessSalePrice表中的金额
+         /// <summary>
+         public string ProductLevel3Name
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public string ProductLevel3Code
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public string UserName
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public string UserCode
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public int DepartmentID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public string DepartmentName
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public string SignCompany
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public string SignCompanyCode
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///金额，商标交易金额，其他的使用BusinessSalePrice表中的金额
+         /// <summary>
+         public System.Decimal Price
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public System.Decimal OrderAmount
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///订单类型，1：新合同，2：终止合同，3：退改的合同
+         /// <summary>
+         public int OrderType
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///支付完成时间，全部支付完成的时间
+         /// <summary>
+         public System.DateTime PayFiirstTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///支付完成时间，全部支付完成的时间
+         /// <summary>
+         public System.DateTime OrderCreateTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///支付完成时间，全部支付完成的时间
+         /// <summary>
+         public System.DateTime ExamineTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///订单编号
+         /// <summary>
+         public int OrderID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///订单与业务关系主键
+         /// <summary>
+         public int ROBID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///关联合同主键
+         /// <summary>
+         public string ChangeContractNumber
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///创建时间
+         /// <summary>
+         public System.DateTime RecordCreateTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///更新时间
+         /// <summary>
+         public System.DateTime RecordUpdateTime
+         {
+             get;
+             set;
+         }
+    } 
+} 

@@ -1,0 +1,286 @@
+using System;
+namespace Ipdss.Model 
+{ 
+    [Table("SalesFirstPayOrderDayDetails")]
+    public class SalesFirstPayOrderDayDetails
+    { 
+         /// <summary>
+         ///
+         /// <summary>
+         public int ID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///订单编码，为合同号，区域+年月日(YYYYMMDD)+序号(4位)
+         /// <summary>
+         public string ContractNumber
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///产品编码
+         /// <summary>
+         public string CustomerCode
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///ApplicationUsers 表主键,合同签约人
+         /// <summary>
+         public string? OrderSigner
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public string? OrderSignerType
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public string? SignerNameCode
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public string? SignerCodeA
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public string? SignerCodeT
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public string? SignerAddress
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public string? UserName
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public string? UserCode
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public int DepartmentID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public string DepartmentName
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public string SignCompany
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public string? SignCompanyCode
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public System.Decimal OrderAmount
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public System.Decimal? OrderPayment
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///订单类型，1：新合同，2：终止合同，3：退改的合同
+         /// <summary>
+         public int? OrderType
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///支付完成时间，全部支付完成的时间
+         /// <summary>
+        [Column(TypeName = "datetime2")]
+         public System.DateTime PayFiirstTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///支付完成时间，全部支付完成的时间
+         /// <summary>
+        [Column(TypeName = "datetime2")]
+         public System.DateTime OrderCreateTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///审核通过时间
+         /// <summary>
+        [Column(TypeName = "datetime2")]
+         public System.DateTime? ExamineTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///合同协议回收完成时间
+         /// <summary>
+        [Column(TypeName = "datetime2")]
+         public System.DateTime? RetrieveDate
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///订单编号
+         /// <summary>
+         public int OrderID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///变更的合同号
+         /// <summary>
+         public string? ChangeContractNumber
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///商机代码，默认使用当前合同首款时间前的最后商机编码
+         /// <summary>
+         public string? InfoCode
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///创建时间
+         /// <summary>
+        [Column(TypeName = "datetime2")]
+         public System.DateTime RecordCreateTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///更新时间
+         /// <summary>
+        [Column(TypeName = "datetime2")]
+         public System.DateTime RecordUpdateTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public string? OrderPayStatus
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public System.Decimal? TodayAmount
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///截止查询结束时间客户累计收款金额
+         /// <summary>
+         public System.Decimal? HistoryAmount
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public int? TodayTradesNum
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///截止查询结束时间客户已成交的有效合同个数
+         /// <summary>
+         public int? HistoryTradesNum
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///支付方式
+         /// <summary>
+         public int? PayType
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///订单来源：0、CRM创建，1为服务商城，2、细软网，3，淘宝商店
+         /// <summary>
+         public int? OrderSource
+         {
+             get;
+             set;
+         }
+    } 
+} 

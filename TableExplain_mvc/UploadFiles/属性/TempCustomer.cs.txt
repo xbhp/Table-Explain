@@ -1,0 +1,316 @@
+using System;
+namespace .Model 
+{ 
+    [Table("TempCustomer")]
+    public class TempCustomer
+    { 
+         /// <summary>
+         ///信息编号
+         /// <summary>
+         public int TCID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///名称
+         /// <summary>
+         public string? Name
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///手机
+         /// <summary>
+         public string? Telephone
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///QQ
+         /// <summary>
+         public string? QQ
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///处理人员
+         /// <summary>
+         public int? ReceiveUser
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///处理时间
+         /// <summary>
+        [Column(TypeName = "datetime2")]
+         public System.DateTime? ReceiveTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///来源
+         /// <summary>
+         public int? Source
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///来源URL
+         /// <summary>
+         public string? SourceUrl
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///所在区域
+         /// <summary>
+         public int? RegionID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///业务类型小类，商标、专利，关联MarketingBusinessType
+         /// <summary>
+         public string? BTID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///客户编码
+         /// <summary>
+         public string? CustomerCode
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///是否是导入数据
+         /// <summary>
+         public bool IsImport
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///状态，0：未处理，1：有效，2：无效，3：已分配 4：分配中
+         /// <summary>
+         public int Status
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///信息级别，1-6类
+         /// <summary>
+         public int? InfoLevel
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public int? CreatedUser
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///记录是否删除
+         /// <summary>
+         public bool RecordIsDelete
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///记录创建时间
+         /// <summary>
+        [Column(TypeName = "datetime2")]
+         public System.DateTime RecordCreateTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///记录最后修改时间
+         /// <summary>
+        [Column(TypeName = "datetime2")]
+         public System.DateTime RecordUpdateTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///电话
+         /// <summary>
+         public string? Tel
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///客户名称
+         /// <summary>
+         public string? CustomerName
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///备注
+         /// <summary>
+         public string? Remark
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///同步代码
+         /// <summary>
+         public string? SyncCode
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///电话分机
+         /// <summary>
+         public string? TelExt
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///队列分配后的结果值  
+         /// <summary>
+         public bool? IsFailed
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///分配结果备注
+         /// <summary>
+         public string? DistributeRemark
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///预分配时间
+         /// <summary>
+        [Column(TypeName = "datetime2")]
+         public System.DateTime? AssignRecordCreateTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public string? Email
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///O3商机ID
+         /// <summary>
+         public string? O3MessageID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///访客cookieID
+         /// <summary>
+         public string? CookieID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public string? ActionType
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public System.Guid? MessageGUID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public string? RemarkUrl
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public string? IPAddress
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///信息原备注
+         /// <summary>
+         public string? OriginalRemark
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public string? AreaCode
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///来源网站:CustomerSourceWebSite 表 主键
+         /// <summary>
+         public int? CSWID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///咨询名称
+         /// <summary>
+         public string? BrandConsult
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///类别
+         /// <summary>
+         public int? BrandCate
+         {
+             get;
+             set;
+         }
+    } 
+} 

@@ -1,0 +1,156 @@
+using System;
+namespace .Model 
+{ 
+    [Table("R_Customer_Visit")]
+    public class R_Customer_Visit
+    { 
+         /// <summary>
+         ///
+         /// <summary>
+         public int VisitID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///业务关系ID
+         /// <summary>
+         public int? RCBID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public string? VTTID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///回访理由，VisitCauseType,多个使用逗号分隔
+         /// <summary>
+         public string? VCTID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public int? CustomerID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///销售阶段
+         /// <summary>
+         public int? SSTID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///下次回访时间
+         /// <summary>
+        [Column(TypeName = "datetime2")]
+         public System.DateTime? NextVisitTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///接待人
+         /// <summary>
+         public string? Receiver
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///回访结果
+         /// <summary>
+         public string? VisitResult
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///预计成交时间
+         /// <summary>
+        [Column(TypeName = "datetime2")]
+         public System.DateTime? ExpectTurnoverTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///预计成交金额
+         /// <summary>
+         public System.Decimal? ExpectTurnoverAmount
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///预计利润
+         /// <summary>
+         public System.Decimal? ExpectProfits
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///注册用户ID
+         /// <summary>
+         public int? CreatedUser
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///记录是否删除
+         /// <summary>
+         public bool RecordIsDelete
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///记录创建时间
+         /// <summary>
+        [Column(TypeName = "datetime2")]
+         public System.DateTime RecordCreateTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///记录最后修改时间
+         /// <summary>
+        [Column(TypeName = "datetime2")]
+         public System.DateTime RecordUpdateTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///拨打结果
+         /// <summary>
+         public int? CVRTID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///营销活动编号 CustomerMarketActivity主键
+         /// <summary>
+         public int? CMAID
+         {
+             get;
+             set;
+         }
+    } 
+} 

@@ -1,0 +1,138 @@
+using System;
+namespace Ipdss.Model 
+{ 
+    [Table("MarketInfoInvalidRatio")]
+    public class MarketInfoInvalidRatio
+    { 
+         /// <summary>
+         ///id
+         /// <summary>
+         public int id
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///同步时间
+         /// <summary>
+        [Column(TypeName = "datetime2")]
+         public System.DateTime? ReportTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///类别ID
+         /// <summary>
+         public int? MKBTID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///设备ID
+         /// <summary>
+         public int? ResourceID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///平台ID
+         /// <summary>
+         public int? PlatformID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///部门Id
+         /// <summary>
+         public int? DepartmentID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///总数
+         /// <summary>
+         public int? AssignNum
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///空号/错号数
+         /// <summary>
+         public int EmptyNum
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///空号错号率
+         /// <summary>
+         public System.Decimal EmptyNumRatio
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///黑名单数
+         /// <summary>
+         public int BlacklistNum
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///黑名单占比
+         /// <summary>
+         public System.Decimal BlacklistNumRatio
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///错误信息数
+         /// <summary>
+         public int ErrorNum
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///错误信息占比
+         /// <summary>
+         public System.Decimal ErrorNumRatio
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///无效信息总数（空号 错号 黑名单 总和）
+         /// <summary>
+         public int InvalidNum
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///无效信息占比
+         /// <summary>
+         public System.Decimal InvalidRatio
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+        [Column(TypeName = "datetime2")]
+         public System.DateTime? RecordCreateTime
+         {
+             get;
+             set;
+         }
+    } 
+} 

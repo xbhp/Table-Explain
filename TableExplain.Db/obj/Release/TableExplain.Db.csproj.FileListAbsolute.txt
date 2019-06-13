@@ -1,0 +1,14 @@
+D:\Projecttest\TableExplain_mvc\TableExplain.Db\bin\Release\TableExplain.Db.dll.config
+D:\Projecttest\TableExplain_mvc\TableExplain.Db\bin\Release\TableExplain.Db.dll
+D:\Projecttest\TableExplain_mvc\TableExplain.Db\bin\Release\TableExplain.Db.pdb
+D:\Projecttest\TableExplain_mvc\TableExplain.Db\bin\Release\EntityFramework.dll
+D:\Projecttest\TableExplain_mvc\TableExplain.Db\bin\Release\EntityFramework.SqlServer.dll
+D:\Projecttest\TableExplain_mvc\TableExplain.Db\bin\Release\Newtonsoft.Json.dll
+D:\Projecttest\TableExplain_mvc\TableExplain.Db\bin\Release\EntityFramework.xml
+D:\Projecttest\TableExplain_mvc\TableExplain.Db\bin\Release\EntityFramework.SqlServer.xml
+D:\Projecttest\TableExplain_mvc\TableExplain.Db\bin\Release\Newtonsoft.Json.xml
+D:\Projecttest\TableExplain_mvc\TableExplain.Db\bin\Release\zh-Hans\EntityFramework.resources.dll
+D:\Projecttest\TableExplain_mvc\TableExplain.Db\bin\Release\zh-Hans\EntityFramework.SqlServer.resources.dll
+D:\Projecttest\TableExplain_mvc\TableExplain.Db\obj\Release\TableExplain.Db.csprojResolveAssemblyReference.cache
+D:\Projecttest\TableExplain_mvc\TableExplain.Db\obj\Release\TableExplain.Db.dll
+D:\Projecttest\TableExplain_mvc\TableExplain.Db\obj\Release\TableExplain.Db.pdb

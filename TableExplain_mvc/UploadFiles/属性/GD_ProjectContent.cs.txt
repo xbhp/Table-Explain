@@ -1,0 +1,208 @@
+using System;
+namespace GeduUser.Model 
+{ 
+    [Table("GD_ProjectContent")]
+    public class GD_ProjectContent
+    { 
+         /// <summary>
+         ///id
+         /// <summary>
+         public int Id
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///标题
+         /// <summary>
+         public string Title
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///项目名称
+         /// <summary>
+         public string? ProjectName
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///搜索指数
+         /// <summary>
+         public int? QuerIndex
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///主页显示
+         /// <summary>
+         public string? zhuyexianshi
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///副标题
+         /// <summary>
+         public string? SubTitle
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///外部链接
+         /// <summary>
+         public string? LinkUrl
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///图片地址
+         /// <summary>
+         public string? ImageUrl
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///作者
+         /// <summary>
+         public string? Author
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///覆盖率
+         /// <summary>
+         public int? coverage
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///点击数
+         /// <summary>
+         public int? ClickNum
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///地区
+         /// <summary>
+         public int? Region
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///招商规模
+         /// <summary>
+         public int? MerchantsScale
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///广告语
+         /// <summary>
+         public string? ComputerAd
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///加盟店个数
+         /// <summary>
+         public int? JoinNum
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///客户电话
+         /// <summary>
+         public string? ClientPhone
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///客户非客户判断
+         /// <summary>
+         public bool? IsClient
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///公司名称
+         /// <summary>
+         public string? CompanyName
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///0是没有图片  1是有图
+         /// <summary>
+         public bool? IsImage
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///项目详情
+         /// <summary>
+         public string? Content
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///排序
+         /// <summary>
+         public int? sort
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///是否禁用
+         /// <summary>
+         public bool? IsDisabled
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///创建时间
+         /// <summary>
+         public System.DateTime? CreateTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///是否删除
+         /// <summary>
+         public bool? IsDelete
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///修改时间
+         /// <summary>
+         public System.DateTime? UpdateTime
+         {
+             get;
+             set;
+         }
+    } 
+} 

@@ -1,0 +1,72 @@
+using System;
+namespace Ipdss.Model 
+{ 
+
+    public class TotalData
+    { 
+         /// <summary>
+         ///
+         /// <summary>
+         public int TDID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///统计的类别原始ID
+         /// <summary>
+         public int TypeID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///总计类别名称
+         /// <summary>
+         public string TotalName
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///数量
+         /// <summary>
+         public int Number
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///总数据模块 1 ，服务分类数据模块2 ，用户地区模块3
+         /// <summary>
+         public int TotalType
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///批次 最新批次
+         /// <summary>
+         public int BatchNum
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///创建世界
+         /// <summary>
+         public System.DateTime RecordCreateTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///是否删除
+         /// <summary>
+         public bool RecordIsDelete
+         {
+             get;
+             set;
+         }
+    } 
+} 

@@ -1,0 +1,250 @@
+using System;
+namespace Ipdss.Model 
+{ 
+    [Table("MarketRegionAnalysis")]
+    public class MarketRegionAnalysis
+    { 
+         /// <summary>
+         ///
+         /// <summary>
+         public int ID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///导入时间
+         /// <summary>
+        [Column(TypeName = "datetime2")]
+         public System.DateTime? ReportTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///平台ID
+         /// <summary>
+         public int? PlatformID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///设备ID
+         /// <summary>
+         public int? ResourceID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///地域ID
+         /// <summary>
+         public int? RegionId
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///商机类别ID
+         /// <summary>
+         public int? BTID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///消费现金 
+         /// <summary>
+         public System.Decimal? CostCash
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///展现
+         /// <summary>
+         public int? Impression
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///点击
+         /// <summary>
+         public int? Click
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///消费
+         /// <summary>
+         public System.Decimal? Cost
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///信息数
+         /// <summary>
+         public int? AssignNum
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///信息成本 =对应的地域消费现金/地域信息数
+         /// <summary>
+         public System.Decimal? InfoCost
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///平均点击价格 = 对应的地域消费/地域点击量
+         /// <summary>
+         public System.Decimal? AvgClickPrice
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///订单数
+         /// <summary>
+         public int? OrderNum
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///订单金额
+         /// <summary>
+         public System.Decimal? OrderAmount
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///查询范围内的订单
+         /// <summary>
+         public int? InOrderNum
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///查询范围内的订单金额
+         /// <summary>
+         public System.Decimal? InOrderAmount
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///展现点击率 对应的地域点击量/地域展现量
+         /// <summary>
+         public System.Decimal? ImpressionClickRate
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///点击信息率=信息数/点击量
+         /// <summary>
+         public System.Decimal? ClickInfoRate
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///信息合同率 合同数/信息数
+         /// <summary>
+         public System.Decimal? InfoOrderRate
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///合同数全国占比  对应地域的合同数/全国合同数
+         /// <summary>
+         public System.Decimal? OrderNumShare
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///范围内合同数全国占比  对应地域的合同数/全国合同数
+         /// <summary>
+         public System.Decimal? InOrderNumShare
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///合同额全国占比=对应地域的合同额/全国合同额
+         /// <summary>
+         public System.Decimal? OrderAmountShare
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///范围内合同额全国占比=对应地域的合同额/全国合同额
+         /// <summary>
+         public System.Decimal? InOrderAmountShare
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///消费现金全国占比 =对应地域的消费现金/全国消费现金
+         /// <summary>
+         public System.Decimal? CostCashShare
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///信息全国占比 对应地域的信息/全国信息
+         /// <summary>
+         public System.Decimal? InfoNumShare
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///产投比 对应地域的合同金额/对应地域的消费现金
+         /// <summary>
+         public System.Decimal? OutputRatio
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///范围内产投比 对应地域的合同金额/对应地域的消费现金
+         /// <summary>
+         public System.Decimal? InOutputRatio
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///ROI=（对应地域的合同金额-对应地域的消费现金）/对应地域的消费现金
+         /// <summary>
+         public System.Decimal? ROI
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///创建时间
+         /// <summary>
+        [Column(TypeName = "datetime2")]
+         public System.DateTime? RecordCreateTime
+         {
+             get;
+             set;
+         }
+    } 
+} 

@@ -1,0 +1,73 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>AddorEditConn</title>
+</head>
+<body>
+    <div> 
+        <form id="dbsub" name="dbsub">
+            <table class="table table-border table-bordered table-bg" style="width:300px;margin:10px">
+                <tr><td style="text-align:right">数据库说明：</td><td><input type="text" id="dbExplain" value="@ViewBag.dbExplain" name="dbExplain" /></td></tr>
+                <tr><td style="text-align:right">数据库名称：</td><td><input type="text" value="@ViewBag.dbName"  id="dbname" name="dbName" /><input type="text"  value="@ViewBag.dbName" style="display:none;" disabled="disabled" id="dbnames" name="dbName" /></td></tr>
+                <tr><td style="text-align:right">链接地址：</td><td><input type="text" value="@ViewBag.dbAddress" name="dbAddress" /></td></tr>
+                <tr><td style="text-align:right">数据库用户名：</td><td><input type="text" value="@ViewBag.userName" name="userName" /></td></tr>
+                <tr><td style="text-align:right">数据库密码：</td><td><input type="text" value="@ViewBag.passWord" name="passWord" /></td></tr>
+                <tr><td colspan="2" align="center"><input type="button" value="保存" class="btn btn-secondary-outline radius" id="subBtn" name="subBtn" /></td></tr>
+            </table>
+            <input type="hidden" name="isAdd" id="isAdd" value="1" />
+        </form>
+    </div>
+
+    <script type="text/javascript" src="/lib/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/h-ui/js/H-ui.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var Request = new Object();
+            Request = GetRequest();
+            var rel = Request["isAdd"];
+           
+            if (rel != "undefined")
+            {
+                $("#isAdd").val(rel);
+                $("#dbname").css("display", "none");
+                $("#dbnames").css("display", "block");
+                //$("#dbExplain").val(decodeURIComponent(Request["dbExplain"]));
+            }
+
+            $("#subBtn").click(function () {
+                var formValue = $("#dbsub").serialize();
+                $.post("_AddOrEditConn", formValue, function (data) {
+                    if(data=="1")
+                    {
+                        alert("操作成功！");
+                        window.parent.location.reload();
+                        //window.location.href="index";
+                    }
+                    else
+                        alert("操作失败");
+            });
+        });
+        });
+        function GetRequest() {
+            var url = location.search; //获取url中"?"符后的字串   
+            var theRequest = new Object();
+            if (url.indexOf("?") != -1) {
+                var str = url.substr(1);
+                strs = str.split("&");
+                for (var i = 0; i < strs.length; i++) {
+                    theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+                }
+            }
+            return theRequest;
+        }
+    </script>
+</body>
+</html>

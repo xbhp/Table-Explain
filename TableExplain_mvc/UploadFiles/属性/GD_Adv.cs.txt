@@ -1,0 +1,112 @@
+using System;
+namespace GeduUser.Model 
+{ 
+    [Table("GD_Adv")]
+    public class GD_Adv
+    { 
+         /// <summary>
+         ///id
+         /// <summary>
+         public int AdvId
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///位置id
+         /// <summary>
+         public int AdAreaId
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///广告名称
+         /// <summary>
+         public string? AdvName
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///描述
+         /// <summary>
+         public string? Summary
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///是否存在时间限制
+         /// <summary>
+         public string? IsDateLimited
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///开始时间
+         /// <summary>
+         public System.DateTime? StartDate
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///结束时间
+         /// <summary>
+         public System.DateTime? EndDate
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///广告显示优先级：1 独占  0是默认显示
+         /// <summary>
+         public int? Level
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///栏目id
+         /// <summary>
+         public int? ColumnId
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///是否禁用
+         /// <summary>
+         public bool? IsDisabled
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///创建时间
+         /// <summary>
+         public System.DateTime? CreateTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///是否删除
+         /// <summary>
+         public bool? IsDelete
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///修改时间
+         /// <summary>
+         public System.DateTime? UpdateTime
+         {
+             get;
+             set;
+         }
+    } 
+} 

@@ -1,0 +1,144 @@
+using System;
+namespace Ipdss.Model 
+{ 
+
+    public class MarketTaskProgress
+    { 
+         /// <summary>
+         ///id
+         /// <summary>
+         public int ID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///统计时间
+         /// <summary>
+         public System.DateTime ReportTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///投放任务类别
+         /// <summary>
+         public int MKBTID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///任务数
+         /// <summary>
+         public int TaskNum
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///CompleteTaskNum
+         /// <summary>
+         public int CompleteTaskNum
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///未完成任务数
+         /// <summary>
+         public int NoCompleteTaskNum
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///完成率
+         /// <summary>
+         public System.Decimal CompleteTaskRate
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///消费总金额
+         /// <summary>
+         public System.Decimal PayAmount
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///消费占比
+         /// <summary>
+         public System.Decimal PayRate
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///信息成本
+         /// <summary>
+         public System.Decimal InfoCost
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///工作日平均
+         /// <summary>
+         public System.Decimal WorkdayAvg
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///周末平均
+         /// <summary>
+         public System.Decimal WeekEndAvg
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///剩余工作日
+         /// <summary>
+         public int SurplusWorkday
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///剩余休息日
+         /// <summary>
+         public int SurplusRestday
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public bool RecordIsDelete
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public System.DateTime RecordCreateTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public System.DateTime RecordUpdateTime
+         {
+             get;
+             set;
+         }
+    } 
+} 

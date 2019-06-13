@@ -1,0 +1,13 @@
+D:\WebProjects\IP-Boss.Dss\IP-Boss.Dss\IP-Boss.Dss.Db\bin\Debug\IP-Boss.Dss.Db.dll.config
+D:\WebProjects\IP-Boss.Dss\IP-Boss.Dss\IP-Boss.Dss.Db\bin\Debug\IP-Boss.Dss.Db.dll
+D:\WebProjects\IP-Boss.Dss\IP-Boss.Dss\IP-Boss.Dss.Db\bin\Debug\IP-Boss.Dss.Db.pdb
+D:\WebProjects\IP-Boss.Dss\IP-Boss.Dss\IP-Boss.Dss.Db\bin\Debug\EntityFramework.dll
+D:\WebProjects\IP-Boss.Dss\IP-Boss.Dss\IP-Boss.Dss.Db\bin\Debug\EntityFramework.SqlServer.dll
+D:\WebProjects\IP-Boss.Dss\IP-Boss.Dss\IP-Boss.Dss.Db\bin\Debug\Newtonsoft.Json.dll
+D:\WebProjects\IP-Boss.Dss\IP-Boss.Dss\IP-Boss.Dss.Db\bin\Debug\EntityFramework.xml
+D:\WebProjects\IP-Boss.Dss\IP-Boss.Dss\IP-Boss.Dss.Db\bin\Debug\EntityFramework.SqlServer.xml
+D:\WebProjects\IP-Boss.Dss\IP-Boss.Dss\IP-Boss.Dss.Db\bin\Debug\Newtonsoft.Json.xml
+D:\WebProjects\IP-Boss.Dss\IP-Boss.Dss\IP-Boss.Dss.Db\bin\Debug\zh-Hans\EntityFramework.resources.dll
+D:\WebProjects\IP-Boss.Dss\IP-Boss.Dss\IP-Boss.Dss.Db\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+D:\WebProjects\IP-Boss.Dss\IP-Boss.Dss\IP-Boss.Dss.Db\obj\Debug\IP-Boss.Dss.Db.dll
+D:\WebProjects\IP-Boss.Dss\IP-Boss.Dss\IP-Boss.Dss.Db\obj\Debug\IP-Boss.Dss.Db.pdb

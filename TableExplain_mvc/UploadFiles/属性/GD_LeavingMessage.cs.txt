@@ -1,0 +1,96 @@
+using System;
+namespace GeduDate.Model 
+{ 
+    [Table("GD_LeavingMessage")]
+    public class GD_LeavingMessage
+    { 
+         /// <summary>
+         ///
+         /// <summary>
+         public int id
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///项目
+         /// <summary>
+         public int? ProjectId
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///项目名称
+         /// <summary>
+         public string? ProjectName
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///客户名称
+         /// <summary>
+         public string? CustomerName
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///客户电话
+         /// <summary>
+         public string? CustomerPhone
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///投资额度
+         /// <summary>
+         public string? Quota
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///互联网联系方式/qq 微信 邮箱
+         /// <summary>
+         public string? NetContact
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///地址
+         /// <summary>
+         public string? Address
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///回访   1  随时  2 上班   3 下班
+         /// <summary>
+         public string? CustomerVisit
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///留言内容
+         /// <summary>
+         public string? WordsContent
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public System.DateTime? CreateTime
+         {
+             get;
+             set;
+         }
+    } 
+} 

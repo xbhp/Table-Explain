@@ -1,0 +1,24 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>View</title>
+</head>
+<body>
+    <div> 
+        <h3> 数据库连接信息</h3>
+        <table><tr><td>数据库名称：</td><td><input type="text" name="dbName" /></td></tr>
+            <tr>链接地址：<td></td><td><input type="text" name="dbAddress" /></td></tr>
+            <tr>用户名：<td></td><td><input type="text" name="userName" /></td></tr>
+            <tr>密码：<td></td><td><input type="text" name="passWord" /></td></tr>
+        </table>
+        <span>当前连接地址：@ViewBag.Conntion</span>
+    </div>
+</body>
+</html>

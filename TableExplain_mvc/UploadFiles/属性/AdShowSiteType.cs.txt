@@ -1,0 +1,88 @@
+using System;
+namespace CiprunOA_BETA.Model 
+{ 
+
+    public class AdShowSiteType
+    { 
+         /// <summary>
+         ///
+         /// <summary>
+         public string ASSTID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///上级ID,分为两级,页面、位置
+         /// <summary>
+         public string PatentID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///位置名称
+         /// <summary>
+         public string Name
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///地址路径
+         /// <summary>
+         public string Location
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///单价
+         /// <summary>
+         public string Price
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///备注
+         /// <summary>
+         public string Remark
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///InfoBTID,根据不同业务类型得到不同数据源
+         /// <summary>
+         public string ASSTBTID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///记录是否删除
+         /// <summary>
+         public string RecordIsDelete
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///记录创建时间
+         /// <summary>
+         public string RecordCreateTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///记录最后修改时间
+         /// <summary>
+         public string RecordUpdateTime
+         {
+             get;
+             set;
+         }
+    } 
+} 

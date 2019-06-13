@@ -1,0 +1,96 @@
+using System;
+namespace Ipdss.Model 
+{ 
+
+    public class TransferCustomerDetail
+    { 
+         /// <summary>
+         ///
+         /// <summary>
+         public int TCDID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///导入时间
+         /// <summary>
+         public System.DateTime ReportTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///客户ID
+         /// <summary>
+         public int CustomerID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///客户编码
+         /// <summary>
+         public string CustomerCode
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///客户创建时间
+         /// <summary>
+         public System.DateTime CreateTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///客户所属人(转派前)
+         /// <summary>
+         public int UserID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///转派人
+         /// <summary>
+         public int transferUser
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///转派时间
+         /// <summary>
+         public System.DateTime transferTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///客户所属ID(转派后)
+         /// <summary>
+         public int transferUserID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///创建时间
+         /// <summary>
+         public System.DateTime RecordCreateTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///是否删除
+         /// <summary>
+         public bool RecordIsDelete
+         {
+             get;
+             set;
+         }
+    } 
+} 

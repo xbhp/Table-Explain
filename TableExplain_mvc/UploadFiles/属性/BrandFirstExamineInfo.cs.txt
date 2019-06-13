@@ -1,0 +1,104 @@
+using System;
+namespace CiprunOA_BETA.Model 
+{ 
+
+    public class BrandFirstExamineInfo
+    { 
+         /// <summary>
+         ///
+         /// <summary>
+         public string BFEIID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///商标业务主键
+         /// <summary>
+         public string InfoID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///初审公告号
+         /// <summary>
+         public string NotificationNumber
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///发文日期
+         /// <summary>
+         public string NotificationDate
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///发文页码
+         /// <summary>
+         public string Pages
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///收文日期
+         /// <summary>
+         public string ReceiveDate
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///注册用户ID
+         /// <summary>
+         public string CreatedUser
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///记录是否删除
+         /// <summary>
+         public string RecordIsDelete
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///记录创建时间
+         /// <summary>
+         public string RecordCreateTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///记录最后修改时间
+         /// <summary>
+         public string RecordUpdateTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public string IsFirst
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///附件
+         /// <summary>
+         public string ResourceID
+         {
+             get;
+             set;
+         }
+    } 
+} 

@@ -1,0 +1,152 @@
+using System;
+namespace Ipdss.Model 
+{ 
+
+    public class SalesOrderDayDetails
+    { 
+         /// <summary>
+         ///
+         /// <summary>
+         public int ID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public System.DateTime ReportTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///首次支付时间
+         /// <summary>
+         public System.DateTime PayFiirstTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public string ContractNumber
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public int DepartmentID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public int UserID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public int PayAccountStatus
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public int OrderID
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///支付金额
+         /// <summary>
+         public System.Decimal PayAmount
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///根据合同号求和的合同金额，同一个合同多次支付的会累加
+         /// <summary>
+         public System.Decimal DoubleOrderAmount
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///唯一的合同数
+         /// <summary>
+         public int OrderCount
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///真实的合同金额，防止出现，一天内同一合同多次支付的问题
+         /// <summary>
+         public System.Decimal RealOrderAmount
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///支付的时间差，使用首次支付时间与当前时间差
+         /// <summary>
+         public int PayDaySpan
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public System.Decimal CalculateCost
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///记录是否删除
+         /// <summary>
+         public bool RecordIsDelete
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///记录创建时间
+         /// <summary>
+         public System.DateTime RecordCreateTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///记录最后修改时间
+         /// <summary>
+         public System.DateTime RecordUpdateTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+         public string CustomerCode
+         {
+             get;
+             set;
+         }
+    } 
+} 

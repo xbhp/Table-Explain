@@ -1,0 +1,152 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>显示表外键</title>
+    @Scripts.Render("~/bundles/jquery")
+    <link rel="stylesheet" type="text/css" href="/static/h-ui/css/H-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="/static/h-ui.admin/css/H-ui.admin.css" />
+    <link rel="stylesheet" type="text/css" href="/lib/Hui-iconfont/1.0.7/iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="/lib/icheck/icheck.css" />
+    <link rel="stylesheet" type="text/css" href="/static/h-ui.admin/skin/default/skin.css" id="skin" />
+    <link rel="stylesheet" type="text/css" href="/static/h-ui.admin/css/style.css" />
+    <link rel="stylesheet" href="~/Content/jqwidgets/styles/jqx.base.css" type="text/css" />
+
+    <script type="text/javascript" src="~/Scripts/jqwidgets/localization.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxcore.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxdraw.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxchart.core.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxbuttons.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxscrollbar.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxmenu.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxgrid.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxgrid.selection.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxgrid.aggregates.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxgrid.sort.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxgrid.pager.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxgrid.columnsresize.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxdata.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxdata.export.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxgrid.export.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxdropdownlist.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxlistbox.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxtree.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxdropdownbutton.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxtooltip.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxinput.js"></script>
+</head>
+<body>
+
+    <div style="margin:20px 0 0 50px">
+        <h5 id="TableNametitle">显示表外键</h5><div id="jqxgrid"></div>
+        <div style="margin-top:5px">
+            <input type="button" class="btn btn-secondary-outline radius" value="返回表说明" id="returnTabale" />
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(function () {
+            pickerDateSuccess();
+            $("#returnTabale").click(function () {
+                var Request = new Object();
+                Request = GetRequest();
+                window.location = "/TableList/ShowTableDes?TableName=" + Request["TableName"];
+            });
+        });
+    // 时间控件的触发回调
+    function pickerDateSuccess() {
+        var source =
+          {
+              datatype: "json",
+              datafields: [
+                  { name: 'Id', type: 'int' },
+                  { name: 'FkTableName', type: 'string' },
+                  { name: 'FkTableExplain', type: 'string' },
+                  { name: 'FkColumnID', type: 'string' },
+                  { name: 'FkColumnName', type: 'stirng' },
+                  { name: 'PkColumnName', type: 'stirng' },
+                  { name: 'RelevanceUpdate', type: 'stirng' },
+                  { name: 'RelevanceDelete', type: 'stirng' }
+              ],
+              url: "/TableList/GetListTableForeignKey",
+              //sortcolumn: 'RecordCreateTime',
+              //sortdirection: 'desc'
+              
+
+          };
+
+        var Request = new Object();
+        Request = GetRequest();
+        $("#TableNametitle").html($("#TableNametitle").html() + ":" + Request["TableName"]+"外键");
+        var dataAdapter = new $.jqx.dataAdapter(source,
+            {
+                formatData: function (data) {
+                    $.extend(data, {
+                        tableName: Request["TableName"]
+                    });
+                    return data;
+                }
+            }
+        );
+        $('#jqxgrid').jqxGrid('clear');
+        drawGrid(dataAdapter);
+
+
+
+    }
+    // 画表格
+    function drawGrid(dataAdapter) {
+
+        $("#jqxgrid").jqxGrid(
+        {
+            width: $(window).width() - 50,
+            source: dataAdapter,
+            showstatusbar: true,
+            statusbarheight: 25,
+            altrows: true,
+            sortable: true,
+            //pageable: true,
+            //pagesize: 20,
+            showaggregates: false,
+            columnsresize: true,
+            localization: getLocalization('cn'),
+            columns: [
+              { text: '表ID', datafield: 'Id', cellsalign: 'right', columntype: 'textbox' },
+              { text: '外键表名', datafield: 'FkTableName', columntype: 'textbox', cellsalign: 'right' },
+              { text: '外键表说明', datafield: 'FkTableExplain', columntype: 'textbox', align: 'right', cellsalign: 'right' },
+               { text: '外键列ID', datafield: 'FkColumnID', cellsalign: 'right', align: 'right' },
+              { text: '外键列名', datafield: 'FkColumnName', columntype: 'textbox', cellsalign: 'right' },
+              { text: '主键列名', datafield: 'PkColumnName', columntype: 'textbox', cellsalign: 'right' },
+              { text: '级联更新', datafield: 'RelevanceUpdate', columntype: 'textbox', cellsalign: 'left' },
+              { text: '级联删除', datafield: 'RelevanceDelete', columntype: 'textbox', cellsalign: 'left' }
+            ]
+        });
+
+    }
+
+
+
+    function GetRequest() {
+        var url = location.search; //获取url中"?"符后的字串
+        var theRequest = new Object();
+        if (url.indexOf("?") != -1) {
+            var str = url.substr(1);
+            strs = str.split("&");
+            for (var i = 0; i < strs.length; i++) {
+                theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+            }
+        }
+        return theRequest;
+    }
+
+    </script>
+
+
+</body>
+</html>

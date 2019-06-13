@@ -1,0 +1,108 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>存储过程</title>
+
+    <link rel="stylesheet" type="text/css" href="/static/h-ui/css/H-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="/static/h-ui.admin/css/H-ui.admin.css" />
+    <link rel="stylesheet" type="text/css" href="/lib/Hui-iconfont/1.0.7/iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="/lib/icheck/icheck.css" />
+    <link rel="stylesheet" type="text/css" href="/static/h-ui.admin/skin/default/skin.css" id="skin" />
+    <link rel="stylesheet" type="text/css" href="/static/h-ui.admin/css/style.css" />
+
+    <style>
+        #showTb tr td a {
+            float:left;border:1px solid #808080; padding:2px; margin:3px;font-size:13px;
+        }
+    </style>
+</head>
+<body>
+    <div style="width:900px; text-align:center; padding:50px 10px 10px 80px">
+
+        <table id="showTb" class="table table-border table-bordered table-bg" style="width:900px;"><tr><th style="width:10%">序</th><th style="width:80%;  text-align:left" id="typeName"></th></tr>
+</table> 
+    </div>
+    <script type="text/javascript" src="/lib/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/lib/layer/2.1/layer.js"></script>
+    <script type="text/javascript" src="/lib/laypage/1.2/laypage.js"></script> 
+    <script type="text/javascript" src="/static/h-ui/js/H-ui.js"></script> 
+    <script type="text/javascript" src="/static/h-ui.admin/js/H-ui.admin.js"></script> 
+        <script src="~/Scripts/linq.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var Request = new Object();
+            Request = GetRequest();
+            var typev = Request["type"];
+            switch (typev)
+            {
+                case "P":
+                    $("#typeName").html("存储过程");
+                    $("title").html("存储过程");
+                    break;
+                case "V":
+                    $("#typeName").html("视图");
+                    $("title").html("视图");
+                    break;
+                default:
+                    $("#typeName").html("存储过程");
+                    $("title").html("存储过程");
+            }
+            $.post("/TableList/GetListPorcedu", { type: typev}, function (data) {
+                var letters = Enumerable.From(data).Select(function (a) { return a.TableName.substring(0, 1) }).Distinct().ToArray();
+                //var letters = Enumerable.From(data).Select(function (a) { return a.TableName.substring(0, 1) }).GroupBy(function (a) { return a.charAt(0); }).ToArray();
+                $.each(letters, function (i,v) {
+                    $("#showTb").append(" <tr><td>" + v + "</td><td id=td" + v + "></td>");
+                });
+                var words = Enumerable.From(letters).Select(function (a) {
+                    var w = Enumerable.From(data).Where(function (d) { return d.TableName.substring(0, 1) == a; }).Select(function (a) { return "<a onclick=\"member_add('表名：" + a.TableName + "','/TableList/ShowDataBaseType?typeName=" + a.TableName + "&type=" + typev + "','850','610')\" href=\"javascript:;\">" + a.TableName + "</a>" }).ToArray();
+                    var tdcontent = "";
+                   
+                    $.each(w, function (i
+                        ,v) {
+                        tdcontent +=  v ;
+                    });
+                    $("#td" + a).append(tdcontent);
+                    return w;
+                }).ToArray();
+
+                //$.each(letters, function (i, v) {
+                //    var w = Enumerable.From(data).Select(function (d) { if (d.TableName.substring(0, 1) == v) { return d.TableName} }).ToArray();
+                //    var tdcontent = "";
+                //    $.each(w, function (i
+                //        ,v) {
+                //        tdcontent += v;
+                //    });
+                //    alert(tdcontent);
+                //    $("#td" + a).append(tdcontent);
+                //})
+               
+
+            });
+        });
+        function member_add(title, url, w, h) {
+            layer_show(title, url, w, h);
+        }
+        function GetRequest() {
+            var url = location.search; //获取url中"?"符后的字串   
+            var theRequest = new Object();
+            if (url.indexOf("?") != -1) {
+                var str = url.substr(1);
+                strs = str.split("&");
+                for (var i = 0; i < strs.length; i++) {
+                    theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+                }
+            }
+            return theRequest;
+        }
+    </script>
+
+</body>
+
+</html>

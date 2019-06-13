@@ -1,0 +1,66 @@
+using System;
+namespace Ipdss.Model 
+{ 
+    [Table("SalesOrderBuildReport")]
+    public class SalesOrderBuildReport
+    { 
+         /// <summary>
+         ///
+         /// <summary>
+         public int Id
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///同步数据的日期
+         /// <summary>
+        [Column(TypeName = "datetime2")]
+         public System.DateTime? ReportTime
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///统计维度 4为员工级别 3为小组级别 2为部门级别 1为区域级别 0为事业部级别
+         /// <summary>
+         public int? ReportLevel
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///各维度的统计ID
+         /// <summary>
+         public int? CommonId
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///统计日订单数
+         /// <summary>
+         public int? DayOrderNum
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///历史订单数
+         /// <summary>
+         public int? HistoryOrderNum
+         {
+             get;
+             set;
+         }
+         /// <summary>
+         ///
+         /// <summary>
+        [Column(TypeName = "datetime2")]
+         public System.DateTime? RecordCreateTime
+         {
+             get;
+             set;
+         }
+    } 
+} 
